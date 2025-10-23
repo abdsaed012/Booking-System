@@ -1,0 +1,252 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f9fd;
+}
+header {
+  background-color: #0077b6;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #d4f1ff;
+}
+
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #0077b6;
+  color: white;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#searchInput {
+  padding: 15px;
+  width: 80%;
+  max-width: 400px;
+  border: 1.5px solid #605f5f;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#searchButton {
+  padding: 15px 20px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#searchButton:hover {
+  background-color: #45a049;
+}
+
+/* Doctor Cards Grid Layout */
+.doctor-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px; 
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.doctor-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px; 
+  text-align: center;
+  /* margin-block: auto ; */
+}
+
+.doctor-card img {
+  width: 100%;
+  /* border-radius: 50%; */
+  height: 250px;
+  object-fit: cover;
+}
+
+.doctor-card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.doctor-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.doctor-card button {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.doctor-card button:hover {
+  background-color: #45a049;
+}
+
+#not-found {
+  font-size: 16px;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  font-weight: bold;
+  color: red;
+  
+}
+/* Responsive */
+@media (max-width: 700px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  /* Hide menu at the begining */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0077b6;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  /* When menu is active */
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 12px 0;
+    font-size: 20px;
+  }
+
+  /* make Hamburger visible */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* some animation  for open/close icon */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  /* Slide-down animation */
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .doctor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form-group select:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+    outline: none;
+  }
+}
