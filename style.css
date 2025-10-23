@@ -214,6 +214,9 @@ main {
   .menu-toggle {
     display: flex;
   }
+  .menu-toggle span {
+    color: white;
+  }
 
   /* some animation  for open/close icon */
   .menu-toggle.active span:nth-child(1) {
