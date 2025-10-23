@@ -1,0 +1,64 @@
+[
+  {
+    "id":1,
+    "name": "Dr. Abdulahi Saed",
+    "specialization": "Orthopedics",
+    "experience": "12 years",
+    "photo": "/images/Abdsaed.jpg"
+  },
+  { 
+
+    "id":2,
+    "name": "Dr. Rakia Awil",
+    "specialization": "Psychology",
+    "experience": "9 years",
+    "photo":"/images/rakio.jpg"
+    
+   
+  },
+  {
+    "id":3,
+    "name": "Dr. Omar Farah",
+    "specialization": "General Medicine",
+    "experience": "5 years",
+    "photo": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGRvY3RvcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
+  },
+  {
+    "id":4,
+    "name": "Dr. Layla Ali",
+    "specialization": "Cardiology",
+    "experience": "10 years",
+    "photo": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRvY3RvcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
+  },
+  {
+    "id":5,
+    "name": "Dr. Samira Ismail",
+    "specialization": "Dermatology",
+    "experience": "6 years",
+    "photo": "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387"
+  },
+  {
+    "id":6,
+    "name": "Dr. Khaled Ibrahim",
+    "specialization": "Pediatrics",
+    "experience": "9 years",
+    "photo": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9jdG9yfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600"
+  },
+ 
+  {
+    "id":7,
+    "name": "Dr. Abdi Jama",
+    "specialization": "Children",
+    "experience": "10 years",
+    "photo": "https://png.pngtree.com/png-clipart/20231002/original/pngtree-young-afro-professional-doctor-png-image_13227671.png"
+  },
+  {
+    "id":8,
+    "name": "Dr. Ayaan Ahmed",
+    "specialization": "Neurology",
+    "experience": "8 years",
+    "photo": "https://plus.unsplash.com/premium_photo-1661580574627-9211124e5c3f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZG9jdG9yfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600"
+  }
+ 
+ 
+]
