@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment</title>
+  <link rel="stylesheet" href="../Css/book.css">
+</head>
+<body>
+   <!-- Navbar -->
+  <header>
+  <nav>
+    <div class="logo">Booking System</div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul id="nav-links">
+      <li><a href="../index.html">Home</a></li>
+        <li><a href="./book.html">Book Appointment</a></li>
+        <li><a href="./appointments.html">My Appointments</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="appointment-container">
+      <h2>Book an Appointment</h2>
+      
+      <!-- Doctor Info Section -->
+      <div class="doctor-selection " id="disableSection">
+        <img id="doctor-image" src="" alt="Doctor Image">
+        <h3 id="doctor-name">Dr. Unknown</h3>
+        <p id="doctor-specialization">Specialization: Not Set</p>
+        <p id="doctor-experience">Experience: Not Set</p>
+      </div>
+
+      
+      <!-- Doctor Selection Dropdown (Initial) -->
+      <div class="form-group" id="doctor-selection-section">
+        <label for="doctor-select">Select Doctor:</label>
+        <select id="doctor-select">
+          <option value="" disabled selected>Select a Doctor</option>
+          <!-- Doctors will be populated dynamically -->
+        </select>
+      </div>
+
+      <!-- Appointment Date Picker -->
+      <div class="form-group">
+        <label for="appointment-date">Select Appointment Date:</label>
+        <input type="date" class="appointment-d-t" id="appointment-date" required>
+      </div>
+
+      <!-- Appointment Time Picker -->
+      <div class="form-group">
+        <label for="appointment-time">Select Appointment Time:</label>
+        <input type="time" id="appointment-time" placeholder="MM-DD-YY" required>
+      </div>
+
+      <!-- Patient Details Section -->
+      <div class="form-group">
+        <label for="patient-name">Your Full Name:</label>
+        <input type="text" id="patient-name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" placeholder="Enter your contact number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter your age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          
+        </select>
+      </div>
+
+      <!-- Confirm Button -->
+      <button type="submit" id="confirm-booking">Book Appointment</button>
+    </section>
+  </main>
+  
+
+  <footer>
+    <p>© Abdulahi Saed 2025 Hospital Booking</p>
+  </footer>
+
+  <script src="../Java Script/book.js"></script>
+  
+</body>
+</html>
