@@ -1,0 +1,283 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f9fd;
+}
+header {
+  background-color: #0077b6;
+  padding: 10px 0; 
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* logo */
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* nav links */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #d4f1ff;
+}
+
+/* humb icon */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+h2, h3 {
+    text-align: center;
+}
+.appointments-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+h2 {
+  text-align: center;
+  color: #0077b6;
+}
+
+
+.appointment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.doctor-section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.appointment-card img {
+  width: 100px;
+  height: 100px;
+   object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.appointment-details h4,
+.patient-section h4 {
+  margin: 0;
+  color: #000;
+}
+
+.appointment-details p,
+.patient-section p {
+  margin: 5px 0;
+  color: #333;
+}
+.patient-section {
+  flex: 1;
+  padding-left: 40px;
+  border-left: 1px solid #ccc;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+}
+
+.patient-section h3 {
+  color: #0077b6;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  align-self: flex-start; 
+}
+
+.cancel-appointment{
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cancel-btn:hover {
+  background-color: #45a049;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #0077b6;
+    color: white;
+}
+
+/* Responsive design */
+
+/* Responsive */
+@media (max-width: 700px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  /* Hide menu  */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0077b6;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  /* When menu is active */
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 12px 0;
+    font-size: 20px;
+  }
+
+  /* Hamburger visible */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Animation for open/close icon */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  /* Slide-down animation */
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  .appointment-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .doctor-section {
+    display: flex;
+    flex-direction: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  .cancel-appointment{
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+
+  }
+  /* image */
+  .appointment-card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .patient-section{
+    margin-top: 2rem;
+    border-left: none;
+    border-top: 1.5px solid #ccc;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+  }
+  
+  
+  
+}
+

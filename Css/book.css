@@ -1,0 +1,307 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f9fd;
+}
+header {
+  background-color: #0077b6;
+  padding: 10px 0; 
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #d4f1ff;
+}
+
+/* hum  icon */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #0077b6;
+  color: white;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+.appointment-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: #0077b6;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group select {
+  width: 95%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1.5px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #388e3c;
+}
+
+input[readonly] {
+  background-color: #f3f3f3;
+  cursor: not-allowed;
+  font-size: 16px;
+}
+
+input[type="date"], input[type="time"] {
+  background-color: #fff;
+  
+}
+
+/* Doctor Info Section */
+.doctor-selection {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.doctor-selection img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.doctor-selection h3 {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.doctor-selection p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/*  spacing between  form  */
+.form-group {
+  margin-bottom: 20px;
+}
+.appointment-d-t {
+    font-size: 1.1rem;
+}
+#disableSection {
+  display: none;
+}
+/* Toast Notification lkn hadda waan iskadaayay */
+/* .toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+} */
+
+
+
+/* Responsive */
+@media (max-width: 700px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  /* Hide menu  */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0077b6;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  /* When menu is active */
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 12px 0;
+    font-size: 20px;
+  }
+
+  /* Hamburger visible */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Animation for open/close icon */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  /* Slide-down animation */
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .doctor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .doctor-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+
+
+  /* options */
+  .form-group input,
+  .form-group select {
+    width: 90%;
+    font-size: 1.1rem;
+    padding: 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+
+  }
+
+  
+ 
+  }
+  
